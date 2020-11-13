@@ -1,6 +1,4 @@
 #!/bin/sh
-#exit from conda base
-conda deactivate
 # update & upgrade #
 sudo apt-get update
 sudo apt-get upgrade
@@ -21,11 +19,12 @@ sudo apt install python-rosdep python-rosinstall python-rosinstall-generator pyt
 sudo apt install python-rosdep
 sudo rosdep init
 rosdep update
+sudo reboot
 # Create a ROS Workspace
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/
-catkin_make
+#mkdir -p ~/catkin_ws/src
+#cd ~/catkin_ws/
+#catkin_make
 # source new setup file
-source ~/catkin_ws/devel/setup.bash
-echo $ROS_PACKAGE_PATH
-echo "source $HOME/catkin_ws/devel/setup.bash" >> ~/.bashrc
+#source ~/catkin_ws/devel/setup.bash
+#echo $ROS_PACKAGE_PATH
+#echo "source $HOME/catkin_ws/devel/setup.bash" >> ~/.bashrc
